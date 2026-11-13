@@ -1,0 +1,179 @@
+{
+  "schema_version": 1,
+  "status": "all assertions passed",
+  "methods": [
+    "exhaustive permutation enumeration",
+    "last-label cycle recurrence"
+  ],
+  "enumeration_range": [
+    1,
+    9
+  ],
+  "permutations_enumerated": 409113,
+  "recurrence_range": [
+    0,
+    80
+  ],
+  "difference_formula_range": [
+    5,
+    80
+  ],
+  "row_gcd_range": [
+    3,
+    80
+  ],
+  "long_cycle_instances_checked": 1638,
+  "literal_adjacent_conjecture_fails_at_every_checked_size": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80
+  ],
+  "first_column_convention": "T(n,1)=0 as displayed in OEIS, not literal cycle avoidance",
+  "enumeration_rows": {
+    "1": [
+      0
+    ],
+    "2": [
+      0,
+      0
+    ],
+    "3": [
+      0,
+      2,
+      0
+    ],
+    "4": [
+      0,
+      6,
+      9,
+      3
+    ],
+    "5": [
+      0,
+      24,
+      24,
+      44,
+      20
+    ],
+    "6": [
+      0,
+      160,
+      225,
+      175,
+      265,
+      145
+    ],
+    "7": [
+      0,
+      1140,
+      1224,
+      1434,
+      1350,
+      1854,
+      1134
+    ],
+    "8": [
+      0,
+      8988,
+      11025,
+      12313,
+      12145,
+      11473,
+      14833,
+      9793
+    ],
+    "9": [
+      0,
+      80864,
+      93456,
+      100232,
+      106280,
+      113336,
+      107576,
+      133496,
+      93176
+    ]
+  },
+  "counterexample": {
+    "size": 5,
+    "T(5,3)": 24,
+    "T(5,4)": 44,
+    "actual": 20,
+    "conjectured": 6
+  },
+  "scope": "Exact finite checks: permutation enumeration through n=9; cycle recurrence through n=80. Unbounded difference identities have written proofs; the row-gcd equality is Su, Theorem 7.3.",
+  "verification_source_sha256": "17ee2a73d764f95d5bd7062c4a13aec0000f22f824e52077a2362ff39f151a90"
+}

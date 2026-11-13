@@ -1,0 +1,275 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.9in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,urlcolor=blue,citecolor=blue,linkcolor=blue,
+pdftitle={OEIS A378495, FORMULA (revision 70): refutation and correction},
+pdfauthor={Haobo Ma and Wenlin Zhang}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\Der}{D}
+\title{OEIS A378495, FORMULA (revision \#70):\\refutation and correction}
+\author{Haobo Ma\\\small ChronoAI Pte Ltd, Singapore
+\and Wenlin Zhang\\\small National University of Singapore\\\small ChronoAI Pte Ltd, Singapore}
+\date{November 2, 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We refute the adjacent-column \emph{Conjecture} and prove the terminal-column
+\emph{Conjecture} in the FORMULA section of Peter Kagey's OEIS entry A378495,
+revision \#70 of October 17, 2026~\cite{triangle}.
+For derangements without a prescribed cycle length, the corrected adjacent
+difference is $n!/[2(n-2)]$ for $n\geq5$; at $n=4$ it is $3$.
+The literal conjecture fails at $n=5$, where its two sides are $20$ and $6$.
+One long-cycle count gives both difference identities and explains the exceptional
+boundary. The earliest proof found of these identities, the index correction,
+and the companion row-gcd theorem is Su's October 18, 2026 preprint
+\cite[Theorem~7.3, Proposition~7.4, Remark~7.5]{su}; Kallat gives a later
+independent proof on October 29~\cite[Theorem~4.1]{valuation}.
+This note gives a self-contained treatment of the differences and their boundary.
+\end{abstract}
+
+\section{The question and the corrected formulas}
+
+Let $\Der_n$ be the number of derangements of $\{1,\ldots,n\}$, with
+$\Der_0=1$ and $\Der_1=0$. For $2\leq k\leq n$, let $T(n,k)$ count those
+derangements having no cycle of length $k$. We use the displayed triangle's
+convention $T(n,1)=0$~\cite{triangle}. This first column is a convention:
+literal avoidance of $1$-cycles would instead give $\Der_n$.
+Every cycle-avoidance assertion below concerns $k\geq2$.
+
+Write
+\begin{equation}\label{eq:b}
+ b(m)=(-1)^m\frac{(m+3)!}{2(m+1)}\qquad(m\geq0).
+\end{equation}
+This is A238474 with its published offset $0$~\cite{bsequence}.
+The two FORMULA conjectures in A378495 are
+\begin{align}
+ T(n,n-1)-T(n,n-2)&=|b(n-4)| &&(n\geq4),\label{eq:original}\\
+ T(n,n-2)-T(n,n)&=\frac{(n-3)!(n-4)(n-1)}2 &&(n\geq5).
+ \label{eq:terminal}
+\end{align}
+The first formula needs both an index correction and a separate boundary value.
+
+\begin{theorem}\label{thm:main}
+For $n\geq5$,
+\begin{align}
+ T(n,n-1)-T(n,n-2)
+ &=\frac{n!}{2(n-2)}=|b(n-3)|,\label{eq:corrected}\\
+ T(n,n-2)-T(n,n)
+ &=\frac{(n-3)!(n-4)(n-1)}2.\label{eq:proved}
+\end{align}
+At $n=4$, both differences on the left are $3$.
+Equation~\eqref{eq:original} holds at $n=4$ and fails for every $n\geq5$.
+\end{theorem}
+
+Su's Proposition~7.4~\cite{su} proves both identities and records the
+$n-3$ correction, the $n=5$ counterexample, and the separate $n=4$ boundary;
+Remark~7.5 distinguishes the corrected formula from the printed conjecture.
+Kallat's later proof appears in
+\cite[Theorem~4.1(c)--(d), Appendix~A.11.3, footnote~3]{valuation},
+and his Section~1.5 cites Su's earlier work.
+The proof below uses their direct cycle decomposition.
+
+\section{One cycle count and its consequences}
+
+\begin{lemma}\label{lem:long}
+If $2\leq k\leq n$ and $2k>n$, then
+\begin{equation}\label{eq:long}
+ \Der_n-T(n,k)=\binom nk(k-1)!\Der_{n-k}
+             =\frac{n!}{k(n-k)!}\Der_{n-k}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+A permutation of $n$ points contains at most one $k$-cycle when $2k>n$.
+Choose its $k$ labels in $\binom nk$ ways, give them a cyclic order in
+$(k-1)!$ ways, and derange the other $n-k$ labels in $\Der_{n-k}$ ways.
+The distinguished cycle is unique, so this construction counts every excluded
+derangement exactly once. Subtracting the excluded count from $\Der_n$
+gives~\eqref{eq:long}.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+An $n$-cycle has $(n-1)!$ cyclic orders. An $(n-1)$-cycle would leave one
+fixed point, so it cannot occur in a derangement. For $n\geq5$, an $(n-2)$-cycle
+leaves exactly two labels, which must form a transposition. Thus
+\begin{align}
+ T(n,n)&=\Der_n-(n-1)!,\label{eq:last}\\
+ T(n,n-1)&=\Der_n,\label{eq:next}\\
+ T(n,n-2)&=\Der_n-\binom n2(n-3)!.\label{eq:third}
+\end{align}
+These are also the cases $k=n,n-1,n-2$ of Lemma~\ref{lem:long}, using
+$\Der_0=1$, $\Der_1=0$, and $\Der_2=1$.
+Subtracting~\eqref{eq:third} from~\eqref{eq:next} gives
+\[
+ \binom n2(n-3)!=\frac{n(n-1)(n-3)!}{2}
+              =\frac{n!}{2(n-2)}=|b(n-3)|.
+\]
+Subtracting~\eqref{eq:last} from~\eqref{eq:third} gives
+\[
+ (n-1)!-\binom n2(n-3)!
+ =(n-1)(n-3)!\left((n-2)-\frac n2\right)
+ =\frac{(n-3)!(n-4)(n-1)}2.
+\]
+For $n=4$, the derangements have cycle types $(4)$ and $(2,2)$.
+There are $3!=6$ of the first type and $4!/(2^2\,2!)=3$ of the second.
+Consequently,
+\[
+ T(4,2)=6,\qquad T(4,3)=9,\qquad T(4,4)=3.
+\]
+The count $\binom42(4-3)!=6$ would distinguish one of two transpositions
+and count each permutation of type $(2,2)$ twice. This is precisely why
+the $n\geq5$ argument cannot be extended to $n=4$.
+
+Finally, $|b(0)|=3$, whereas for $n\geq5$ the ratio of the actual adjacent
+difference to the right side of~\eqref{eq:original} is
+\[
+ \frac{n!/[2(n-2)]}{(n-1)!/[2(n-3)]}
+ =\frac{n(n-3)}{n-2}>1.
+\]
+The strict inequality follows from
+$n(n-3)-(n-2)=(n-2)^2-2>0$ for $n\geq5$.
+This proves every assertion of the theorem.
+\end{proof}
+
+At $n=5$ there are $24$ cycles of type $(5)$ and
+$\binom52\,2!=20$ permutations of type $(3,2)$. Hence
+\[
+ T(5,3)=24,\quad T(5,4)=44,\quad T(5,5)=20,
+ \qquad 44-24=20\ne6=|b(1)|.
+\]
+This is an explicit counterexample to the literal conjecture with its original
+offset, not to the corrected formula.
+
+\section{The companion row-gcd conjecture}
+
+The COMMENTS section of the same entry conjectures
+\begin{equation}\label{eq:gcd}
+ \gcd_{1\leq k\leq n}T(n,k)=n-1\qquad(n\geq3).
+\end{equation}
+Su's Theorem~7.3~\cite{su} proves exactly~\eqref{eq:gcd}, using the raw and
+normalized prime-shift congruences of his Lemma~7.2. This is the earliest
+proof found. Kallat's later independent proof is Theorem~4.1(b)~\cite{valuation},
+the case $r=1$ of his Theorem~5.1, with the proof in Appendix~A.11.4.
+His gcd is over columns $2,\ldots,n$; adding the zero first column leaves it
+unchanged. The October 11 shift-congruence paper~\cite[p.~27]{shift}
+discusses the triangle before these two proofs.
+
+The common-divisor direction has a short independent explanation.
+Let $A_k(s)$ count derangements on $s$ labels avoiding $k$-cycles, for $k\geq2$,
+with $A_k(0)=1$. Choosing the cycle containing one specified label gives
+\begin{equation}\label{eq:recurrence}
+ A_k(n)=\sum_{\substack{2\leq\ell\leq n\\\ell\ne k}}
+ \binom{n-1}{\ell-1}(\ell-1)!A_k(n-\ell).
+\end{equation}
+Indeed, choose its other $\ell-1$ labels, arrange that cycle, and complete
+the permutation independently on the remaining labels.
+For $n\geq2$ every nonempty summand contains the factor $n-1$, because
+\[
+ \binom{n-1}{\ell-1}(\ell-1)!
+ =(n-1)(n-2)\cdots(n-\ell+1).
+\]
+Therefore $n-1$ divides every $T(n,k)$ for $k\geq2$.
+For the reverse divisibility in~\eqref{eq:gcd}, we use Su's cited theorem;
+the last three columns alone do not give it. At $n=7$, for example, their
+gcd is $\gcd(1350,1854,1134)=18$, whereas the row gcd is $6$.
+
+\section{Checks and verification scope}
+
+For orientation the two differences are displayed below. The $n=4$ row is
+the exceptional boundary, not an instance of the $n\geq5$ formulas.
+\begin{center}
+\begin{tabular}{rrrrrr}
+\toprule
+$n$&$T(n,n-2)$&$T(n,n-1)$&$T(n,n)$&adjacent difference&terminal difference\\
+\midrule
+4&6&9&3&3&3\\
+5&24&44&20&20&4\\
+6&175&265&145&90&30\\
+7&1350&1854&1134&504&216\\
+\bottomrule
+\end{tabular}
+\end{center}
+The terminal difference in the last column means $T(n,n-2)-T(n,n)$.
+Exact enumeration through $n=9$ and recurrence~\eqref{eq:recurrence} through
+$n=80$ independently check the displayed values and the stated identities
+on those finite ranges. The all-$n$ difference statements are established by
+the proof above; the all-$n$ gcd equality is the cited theorem of Su, with
+Kallat's later proof providing a second reference.
+
+The coverage of the three conjectures in revision \#70 is as follows.
+\begin{center}
+\small
+\begin{tabular}{p{0.22\linewidth}p{0.69\linewidth}}
+\toprule
+Source item & Mathematical coverage\\
+\midrule
+FORMULA, first conjecture & Refuted and corrected by Theorem~\ref{thm:main};
+Su, Proposition~7.4 and Remark~7.5.\\
+FORMULA, second conjecture & Proved by Theorem~\ref{thm:main};
+Su, Proposition~7.4.\\
+COMMENTS, row gcd & Prior proof cited: Su, Theorem~7.3;
+common divisibility proved above.\\
+\bottomrule
+\end{tabular}
+\end{center}
+The recorded formulas for columns $n-1$ and $n$ are equations
+\eqref{eq:next} and~\eqref{eq:last}. The cross-referenced A000166,
+A038205, and A122974 describe counts used to define the triangle;
+A238474 supplies the offset in~\eqref{eq:b}. This note does not address
+other statements in those entries or the Sheffer triangle A238363.
+
+At the pinned revision~\cite{lean}, the Lean declaration
+\href{https://github.com/the-omega-institute/trureturing/blob/cdafeab0d44da2b6840cfc802535d2f94a146fad/D5/S3/Combinatorics/Derangements/AdjacentDifferenceRefutation.lean}{\texttt{AdjacentDifferenceRefutation.result}}
+expresses the negation of the printed universal adjacent formula, with witness
+$n=5$. The declaration
+\href{https://github.com/the-omega-institute/trureturing/blob/cdafeab0d44da2b6840cfc802535d2f94a146fad/D5/S3/Combinatorics/Derangements/TerminalDifference.lean}{\texttt{TerminalDifference.result}}
+expresses the terminal formula for every $n\geq5$, using rational subtraction.
+Both use the namespace \texttt{D5.S3.Combinatorics.Derangements}.
+The corrected adjacent formula and the long-cycle identity have written
+proofs here; the row-gcd equality is attributed above. The finite checks
+cover only their stated ranges.
+
+\begin{thebibliography}{9}
+\bibitem{triangle} P. Kagey, \emph{A378495: Triangle of derangements with no
+$k$-cycles}, The On-Line Encyclopedia of Integer Sequences, created
+November 29, 2024; internal revision \#70, October 17, 2026.
+\url{https://oeis.org/A378495/internal}.
+
+\bibitem{bsequence} The On-Line Encyclopedia of Integer Sequences,
+\emph{A238474}, formula and offset, accessed November 2, 2026.
+\url{https://oeis.org/A238474/internal}.
+
+\bibitem{su} L.-H. Su, \emph{Congruences for Restricted-Cycle and
+Pell-Weighted Permutations}, Zenodo, version~1, October 18, 2026.
+Theorem~7.3 and Proposition~7.4, p.~9; Remark~7.5, p.~10.
+\url{https://doi.org/10.5281/zenodo.23445724}.
+
+\bibitem{valuation} A. Kallat, \emph{A $p$-adic Valuation Calculus for
+Permutations with Restricted Cycle Lengths}, arXiv:2610.40342v1,
+October 29, 2026. Theorem~4.1, footnote~3, Theorem~5.1,
+and Appendices~A.11.3--A.11.4.
+\url{https://arxiv.org/abs/2610.40342v1}.
+
+\bibitem{shift} A. Kallat, \emph{Universal Shift Congruences for Weighted
+Permutation Sequences}, arXiv:2610.15849v1, October 11, 2026, p.~27.
+\url{https://arxiv.org/abs/2610.15849v1}.
+
+\bibitem{lean} Trureturing contributors, \emph{AdjacentDifferenceRefutation.lean}
+and \emph{TerminalDifference.lean}, revision
+\href{https://github.com/the-omega-institute/trureturing/blob/cdafeab0d44da2b6840cfc802535d2f94a146fad/D5/S3/Combinatorics/Derangements/AdjacentDifferenceRefutation.lean}{adjacent-formula declaration}
+and
+\href{https://github.com/the-omega-institute/trureturing/blob/cdafeab0d44da2b6840cfc802535d2f94a146fad/D5/S3/Combinatorics/Derangements/TerminalDifference.lean}{terminal-formula declaration}.
+The declarations are respectively \texttt{AdjacentDifferenceRefutation.result}
+and \texttt{TerminalDifference.result} in the namespace
+\texttt{D5.S3.Combinatorics.Derangements}.
+\end{thebibliography}
+
+\smallskip
+\noindent\small Copyright 2026 Haobo Ma and Wenlin Zhang.
+Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
+\url{https://creativecommons.org/licenses/by/4.0/}.
+\end{document}

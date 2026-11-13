@@ -1,0 +1,62 @@
+{
+  "files": {
+    "pdf": {
+      "bytes": 63142,
+      "matches_public": null,
+      "path": "paper.pdf",
+      "public_sha256": null,
+      "sha256": "70b8b5b7d9f2f72bdb1f90c7b813c7d73fe6012a21f5224a1310af66f576fc4a"
+    },
+    "source": {
+      "bytes": 10749,
+      "matches_public": null,
+      "path": "manuscript/",
+      "public_sha256": null,
+      "sha256": "f9f0b693326dc3adc3105fb70a0b959fb884060986c62d3f7a0af54d47255dac"
+    }
+  },
+  "source_identity": "Mathesis public projection",
+  "work": {
+    "abstract_text": "We refute the adjacent-column Conjecture and prove the terminal-column Conjecture in the FORMULA section of Peter Kagey's OEIS entry A378495, revision #70 of October 17, 2026. For n>=5 the corrected adjacent difference is n!/[2(n-2)]=abs(A238474(n-3)); at n=4 it is 3. The literal conjecture fails at n=5, where its sides are 20 and 6. The earliest proof found of the row gcd, both differences and the index correction is Lien-Hung Su, DOI 10.5281/zenodo.23445724 v1 (October 18, 2026), Theorem 7.3, Proposition 7.4 and Remark 7.5; Ahaan Kallat gives a later independent proof in arXiv:2610.40342v1 (October 29, 2026), Theorem 4.1. This note gives a self-contained treatment of the differences and their boundary.",
+    "authors": [
+      {
+        "affiliation": "ChronoAI Pte Ltd, Singapore",
+        "name": "Haobo Ma"
+      },
+      {
+        "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+        "name": "Wenlin Zhang"
+      }
+    ],
+    "concept_doi": "10.5281/zenodo.23903308",
+    "current_version": 3,
+    "doi": "10.5281/zenodo.23903309",
+    "lean_source": {
+      "revision": "cdafeab0d44da2b6840cfc802535d2f94a146fad",
+      "url": "https://github.com/the-omega-institute/trureturing/blob/cdafeab0d44da2b6840cfc802535d2f94a146fad/D5/S3/Combinatorics/Derangements/AdjacentDifferenceRefutation.lean"
+    },
+    "license": "CC-BY-4.0",
+    "msc": [],
+    "pdf": {
+      "url": "/api/v1/collected-papers/oeis-a378495-difference-conjectures/files/pdf?version=3"
+    },
+    "previous_version": null,
+    "publication": "public",
+    "published_on": "2026-11-05T08:03:28.721090159Z",
+    "record": "oeis-a378495-difference-conjectures",
+    "repository_name": "6aec38505386727c8b0b631c",
+    "source": {
+      "url": "/api/v1/collected-papers/oeis-a378495-difference-conjectures/files/source?version=3"
+    },
+    "title": "OEIS A378495, FORMULA (revision #70): refutation and correction",
+    "versions": [
+      {
+        "previous_version": null,
+        "published_on": "2026-11-05T08:03:28.721090159Z",
+        "revision": "3",
+        "version": 3
+      }
+    ],
+    "work": "oeis-a378495-difference-conjectures"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "schema": "mathesis.materials.v1",
+  "work": "oeis-a378495-difference-conjectures",
+  "version": 3,
+  "repository_url": "https://github.com/mathesis-papers/6aec38505386727c8b0b631c",
+  "site_url": "https://papers.trureturing.org/6aec38505386727c8b0b631c/",
+  "doi": "10.5281/zenodo.23903309",
+  "reading": {
+    "en": "https://papers.trureturing.org/6aec38505386727c8b0b631c/en/",
+    "zh": "https://papers.trureturing.org/6aec38505386727c8b0b631c/zh/"
+  },
+  "slides": [],
+  "visualizations": []
+}

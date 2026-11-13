@@ -1,0 +1,24 @@
+{
+  "id": "oeis-a378495-difference-conjectures",
+  "revision": 3,
+  "problem_ids": [
+    "oeis-a378495-adjacent-difference",
+    "oeis-a378495-terminal-difference"
+  ],
+  "topic": "Adjacent and terminal differences in OEIS A378495, with attribution of the row-gcd theorem to Su and the later independent proof of Kallat",
+  "title": "OEIS A378495, FORMULA (revision #70): refutation and correction",
+  "creators": [
+    {
+      "name": "Haobo Ma",
+      "affiliation": "ChronoAI Pte Ltd, Singapore"
+    },
+    {
+      "name": "Wenlin Zhang",
+      "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore"
+    }
+  ],
+  "abstract": "We refute the adjacent-column Conjecture and prove the terminal-column Conjecture in the FORMULA section of Peter Kagey's OEIS entry A378495, revision #70 of October 17, 2026. For n>=5 the corrected adjacent difference is n!/[2(n-2)]=abs(A238474(n-3)); at n=4 it is 3. The literal conjecture fails at n=5, where its sides are 20 and 6. The earliest proof found of the row gcd, both differences and the index correction is Lien-Hung Su, DOI 10.5281/zenodo.23445724 v1 (October 18, 2026), Theorem 7.3, Proposition 7.4 and Remark 7.5; Ahaan Kallat gives a later independent proof in arXiv:2610.40342v1 (October 29, 2026), Theorem 4.1. This note gives a self-contained treatment of the differences and their boundary.",
+  "summary": "Self-contained difference proofs and finite exact checks, with Su credited for the earliest proof found of all three conjectures and the index correction, followed by Kallat's later independent proof.",
+  "license": "cc-by-4.0",
+  "evidence_url": "https://github.com/the-omega-institute/trureturing/blob/cdafeab0d44da2b6840cfc802535d2f94a146fad/D5/S3/Combinatorics/Derangements/AdjacentDifferenceRefutation.lean"
+}
