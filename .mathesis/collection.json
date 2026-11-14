@@ -1,7 +1,7 @@
 {
   "git_blobs": {
     ".github/workflows/pages.yml": "7879724db1358178aad7e9bed326a44be44f5a6a",
-    ".mathesis/generated.json": "e4ef61b7e21851630dfdaefcb65489c6ef9b9209",
+    ".mathesis/generated.json": "925d9c50b45f6d95e4a298fdb47a5c7a985d27d6",
     "CHANGELOG.md": "130d62a825bf2e73689e26d73bf7350e315755db",
     "CITATION.cff": "3e36d6601397ce61679ee7f903902e38754eb64c",
     "CONTRIBUTING.md": "ea69168fc2cb506b57b00de1ef588aaf011aa3da",
@@ -14,12 +14,13 @@
     "manuscript/metadata.json": "61e808032fb24f2eeb82e0483faebd2476fed5f2",
     "manuscript/note.tex": "2d3ab77fd579fde025a2f37f6c69e36a3afca200",
     "manuscript/verify.py": "dc357c29591dd8be1d1617f451f10ed4470b3b6e",
-    "paper.json": "4ebe4ea255e9897af8cf6f4ac345d829714e5e21",
+    "paper.json": "923f638a44dc8af2b15c4c3e6d908122ca4aacfb",
     "paper.pdf": "e07a1d63e128592189b2cb01a0c767afe08b8b96",
     "site/en/index.html": "a897813505d9a775e15b1787281606955060e546",
-    "site/index.html": "5a4781f0c1cda952f126e18effe5946ec308743e",
+    "site/index.html": "b57697cc2898caa78653f32f7d8e73ad7e5e9df4",
     "site/mathesis-materials.json": "70dd127c557c2d2036f2f0623bdd948a3c1fcf3e",
     "site/zh/index.html": "1b9587382fde40c84382f3da04cb3e85d1d66599",
+    "source.archive": "20e58477e809fc83f177793025f00c3f9a73e39a",
     "versions/v3/.mathesis/generated.json": "20441bc5c92a64bab95965ab7e348017cdf85bc0",
     "versions/v3/CHANGELOG.md": "130d62a825bf2e73689e26d73bf7350e315755db",
     "versions/v3/CITATION.cff": "3e36d6601397ce61679ee7f903902e38754eb64c",
@@ -34,12 +35,13 @@
     "versions/v3/manuscript/note.tex": "2d3ab77fd579fde025a2f37f6c69e36a3afca200",
     "versions/v3/manuscript/verify.py": "dc357c29591dd8be1d1617f451f10ed4470b3b6e",
     "versions/v3/paper.json": "663125e68b6f0e1d56b91491d4b1bcd08a952f7b",
-    "versions/v3/paper.pdf": "e07a1d63e128592189b2cb01a0c767afe08b8b96"
+    "versions/v3/paper.pdf": "e07a1d63e128592189b2cb01a0c767afe08b8b96",
+    "versions/v3/source.archive": "20e58477e809fc83f177793025f00c3f9a73e39a"
   },
   "schema": "mathesis.paper-collection.v1",
   "sha256": {
     ".github/workflows/pages.yml": "f15d983dcb8f324ffdedb50b05f7380e11fda8723d49b5c8f10ef0f414612372",
-    ".mathesis/generated.json": "584ddd03ccd69338a876bc6424dde79172bb299b8ca2c0c698bb34bece0455cf",
+    ".mathesis/generated.json": "3e9c39e0d60eace4eafe0064661db4becb3cff7d1b072d8e427942c9d7f834e7",
     "CHANGELOG.md": "4a3fcff3c788fff736a6dd2aa8eb7731acecf1242601adbff31076916d662b91",
     "CITATION.cff": "647a0a908184143e8833194863a3264f4ea6d6096c3913eb5d254f29bdd090d9",
     "CONTRIBUTING.md": "fafd66e63160b2a88f433af56d2af2b0f7bf6ed2fd417d46b54446ce07c627ff",
@@ -52,12 +54,13 @@
     "manuscript/metadata.json": "642e6cc50f2874ba86f79bab7bdcfb54a06f737f1821a46767d51c3360286d99",
     "manuscript/note.tex": "1717a713608025f56534e6a6b58018cf2d3dba223255446f98733ea404030efd",
     "manuscript/verify.py": "17ee2a73d764f95d5bd7062c4a13aec0000f22f824e52077a2362ff39f151a90",
-    "paper.json": "66081c69b0bea37097e612b4aafd618d37ec567ebf079ec549e139dcd3689235",
+    "paper.json": "4f4cc4229e5472434438dd988d239625e439f477a77f307b31723c7c15d291fa",
     "paper.pdf": "70b8b5b7d9f2f72bdb1f90c7b813c7d73fe6012a21f5224a1310af66f576fc4a",
     "site/en/index.html": "f23b6bbc4e5b937050eab3ff7fcb8622f9e13989cdcf9f8d1d813a01456fe3d6",
-    "site/index.html": "28cc58601a8cc5269452d573c14fa0cf762fc3d05fef59255f325fb6ac22e53e",
+    "site/index.html": "b7db4fd182448834032f4d8013c637e4137e348ad8df80ff69505d7480f94928",
     "site/mathesis-materials.json": "0ce8dcc4a31ac1a5fa82c101da49a428bc4e2e1105c8778f1238cffbcb9e96fe",
     "site/zh/index.html": "501acc2731e3c548e6469a3093acf2bd60148c7e0720e4a1e94986556fd7b952",
+    "source.archive": "f9f0b693326dc3adc3105fb70a0b959fb884060986c62d3f7a0af54d47255dac",
     "versions/v3/.mathesis/generated.json": "b410ea623afbacec049e8569452693ed022e7e2535bcc2be826e73c8baf73035",
     "versions/v3/CHANGELOG.md": "4a3fcff3c788fff736a6dd2aa8eb7731acecf1242601adbff31076916d662b91",
     "versions/v3/CITATION.cff": "647a0a908184143e8833194863a3264f4ea6d6096c3913eb5d254f29bdd090d9",
@@ -72,7 +75,8 @@
     "versions/v3/manuscript/note.tex": "1717a713608025f56534e6a6b58018cf2d3dba223255446f98733ea404030efd",
     "versions/v3/manuscript/verify.py": "17ee2a73d764f95d5bd7062c4a13aec0000f22f824e52077a2362ff39f151a90",
     "versions/v3/paper.json": "c3c775e5085e275c6eda82c58b9582336a2bf3e51f985b5ebd220a4002339fd5",
-    "versions/v3/paper.pdf": "70b8b5b7d9f2f72bdb1f90c7b813c7d73fe6012a21f5224a1310af66f576fc4a"
+    "versions/v3/paper.pdf": "70b8b5b7d9f2f72bdb1f90c7b813c7d73fe6012a21f5224a1310af66f576fc4a",
+    "versions/v3/source.archive": "f9f0b693326dc3adc3105fb70a0b959fb884060986c62d3f7a0af54d47255dac"
   },
   "version": 3,
   "work": "oeis-a378495-difference-conjectures"
